@@ -1,0 +1,17 @@
+CREATE TABLE  "TRANSMASTER" 
+   (	"ID" NUMBER NOT NULL ENABLE, 
+	"CREATEDATE" DATE, 
+	 CONSTRAINT "TRANSMASTER_PK" PRIMARY KEY ("ID") ENABLE
+   ) ;
+
+CREATE OR REPLACE TRIGGER  "BI_TRANSMASTER" 
+  before insert on "TRANSMASTER"               
+  for each row  
+begin   
+  if :NEW."ID" is null then 
+    select "TRANSMASTER_SEQ".nextval into :NEW."ID" from dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_TRANSMASTER" ENABLE;

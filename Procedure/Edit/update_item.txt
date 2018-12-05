@@ -1,0 +1,17 @@
+CREATE OR REPLACE PROCEDURE updateitem (   
+p_1 IN Item.Id%TYPE,
+p_2 IN Item.Name%TYPE,
+p_3 IN Item.Price%TYPE,
+p_4 IN Item.Stock%TYPE  
+)  
+IS  
+BEGIN  
+UPDATE Item SET Name=p_2, Price=p_3,
+Stock=p_4 WHERE id=p_1;  
+COMMIT;  
+END;
+
+
+begin
+updateitem(1,'Shampo',3500,27);
+end;

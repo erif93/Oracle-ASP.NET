@@ -1,0 +1,16 @@
+CREATE OR REPLACE PROCEDURE insert_item (  
+i_id Item.Id%TYPE,  
+i_name Item.Name%TYPE,
+i_price Item.Price%TYPE,  
+i_stock Item.Stock%TYPE
+)
+IS 
+BEGIN  
+INSERT into Item (Id, Name,Price,Stock)  
+VALUES (i_id,i_name,i_price,i_stock);  
+COMMIT;  
+END;   
+
+begin
+insert_item('1','Sabun','7500','25');
+end;

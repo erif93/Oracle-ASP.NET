@@ -1,0 +1,7 @@
+CREATE OR REPLACE TRIGGER transaksi
+AFTER INSERT ON Detil_Transaksi FOR EACH ROW
+BEGIN
+UPDATE Item SET Stock = Stock - :NEW.Qty WHERE
+Id = :NEW.Id_Item;
+END;
+

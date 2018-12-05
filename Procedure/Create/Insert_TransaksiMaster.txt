@@ -1,0 +1,19 @@
+CREATE OR REPLACE PROCEDURE insert_transmaster (  
+i_id Transmaster.Id%TYPE,  
+i_date Transmaster.CreateDate%TYPE
+)
+IS 
+BEGIN  
+INSERT into Transmaster (Id, CreateDate)  
+VALUES (i_id,i_date);  
+COMMIT;  
+END;   
+
+begin
+insert_transmaster('1',SYSDATE);
+end;
+
+
+
+
+
