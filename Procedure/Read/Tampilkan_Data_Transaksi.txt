@@ -1,0 +1,23 @@
+Create or replace procedure getdata is
+cursor kc_data is select i.Name,i.Price,d.Qty,
+t.CreateDate 
+from item i 
+join Detil_Transaksi d 
+on i.Id=d.Id_Item join transmaster t on t.Id=d.Id_Transaksi;
+kc_rec kc_data%rowtype;
+begin
+for kc_rec in kc_data loop
+      dbms_output.put_line('---------------------------------');
+      dbms_output.put_line('Nama Barang : ' || kc_rec.Name);
+      dbms_output.put_line('Harga : ' || kc_rec.Price);
+      dbms_output.put_line('Qty : ' || kc_rec.Qty);
+      dbms_output.put_line('Tanggal Transaksi : ' || kc_rec.CreateDate);
+      dbms_output.put_line('Total : ' || kc_rec.Qty*kc_rec.Price);
+      dbms_output.put_line('---------------------------------');
+end loop;
+end;
+
+
+begin
+getdata;
+end;

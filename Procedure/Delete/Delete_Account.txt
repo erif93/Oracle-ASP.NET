@@ -1,0 +1,12 @@
+CREATE OR REPLACE PROCEDURE delete_account (  
+account_id Account.Id%TYPE
+)
+IS 
+BEGIN  
+delete from Account where Id=account_id;
+COMMIT;  
+END;   
+
+begin
+delete_account('2');
+end;

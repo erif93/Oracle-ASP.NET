@@ -1,0 +1,19 @@
+create or replace 
+   procedure getdataccount
+is
+
+ cursor kc_data is select Username,Password from Account;
+
+kc_rec kc_data%rowtype;
+begin
+for kc_rec in kc_data loop
+ dbms_output.put_line('---------------------------------');
+
+      dbms_output.put_line('Username : ' || kc_rec.Username);
+      dbms_output.put_line('Password : ' || kc_rec.Password);
+end loop;
+end;
+
+begin
+getdataccount;
+end;

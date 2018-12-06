@@ -1,0 +1,14 @@
+CREATE OR REPLACE PROCEDURE updateaccount (   
+p_1 IN Account.Id%TYPE,
+p_2 IN Account.Username%TYPE,
+p_3 IN Account.Password%TYPE
+)  
+IS  
+BEGIN  
+UPDATE Account SET Username=p_2, Password=p_3
+WHERE id=p_1;  
+COMMIT;  
+END;
+begin
+updateaccount(1,'adminpro','adminpro');
+end;

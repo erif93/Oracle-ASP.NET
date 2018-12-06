@@ -1,0 +1,8 @@
+CREATE OR REPLACE TRIGGER account_increment
+  BEFORE INSERT ON Account
+  FOR EACH ROW
+BEGIN
+  SELECT Account_Seq.nextval
+    INTO :NEW.Id
+    FROM dual;
+END;
