@@ -22,76 +22,25 @@ namespace SPDemo.Controllers
             return Json(itemDB.ListAll(), JsonRequestBehavior.AllowGet);
         }
 
-        // GET: Items/Details/5
-        public ActionResult Details(int id)
+        public JsonResult Add(ITEM item)
         {
-            return View();
+            return Json(itemDB.Add(item), JsonRequestBehavior.AllowGet);
         }
 
-        // GET: Items/Create
-        public ActionResult Create()
+        public JsonResult Update(ITEM item)
         {
-            return View();
+            return Json(itemDB.Update(item), JsonRequestBehavior.AllowGet);
         }
 
-        // POST: Items/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public JsonResult GetbyID(int ID)
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            var Item = itemDB.ListAll().Find(x => x.ID.Equals(ID));
+            return Json(Item, JsonRequestBehavior.AllowGet);
         }
 
-        // GET: Items/Edit/5
-        public ActionResult Edit(int id)
+        public JsonResult Delete(int ID)
         {
-            return View();
-        }
-
-        // POST: Items/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Items/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Items/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return Json(itemDB.Delete(ID), JsonRequestBehavior.AllowGet);
         }
     }
 }
