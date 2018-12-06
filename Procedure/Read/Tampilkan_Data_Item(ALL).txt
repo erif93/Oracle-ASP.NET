@@ -1,9 +1,8 @@
 create or replace 
-   procedure getdata(k_id in varchar2)
+   procedure getdata
 is
 
- cursor kc_data is select Name,Price,Stock from Item where 
- Id =k_id;
+ cursor kc_data is select Name,Price,Stock from Item;
 
 kc_rec kc_data%rowtype;
 begin
@@ -15,8 +14,6 @@ for kc_rec in kc_data loop
 end loop;
 end;
 
-
-
 begin
-getdata(2);
+getdata;
 end;

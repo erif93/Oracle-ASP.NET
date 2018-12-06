@@ -1,0 +1,8 @@
+CREATE OR REPLACE TRIGGER detiltransaksi_increment
+  BEFORE INSERT ON Detil_Transaksi
+  FOR EACH ROW
+BEGIN
+  SELECT Detil_Transaksi_Seq.nextval
+    INTO :NEW.Id
+    FROM dual;
+END;

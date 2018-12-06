@@ -1,0 +1,8 @@
+CREATE OR REPLACE TRIGGER transmaster_increment
+  BEFORE INSERT ON Transmaster
+  FOR EACH ROW
+BEGIN
+  SELECT Transmaster_Seq.nextval
+    INTO :NEW.Id
+    FROM dual;
+END;

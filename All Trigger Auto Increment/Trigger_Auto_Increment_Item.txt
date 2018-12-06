@@ -1,0 +1,8 @@
+CREATE OR REPLACE TRIGGER item_increment
+  BEFORE INSERT ON Item
+  FOR EACH ROW
+BEGIN
+  SELECT Item_Seq.nextval
+    INTO :NEW.Id
+    FROM dual;
+END;
