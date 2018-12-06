@@ -1,0 +1,16 @@
+CREATE OR REPLACE PROCEDURE insert_account (  
+a_id Account.Id%TYPE,  
+a_uname Account.Username%TYPE,
+a_password Account.Password%TYPE
+)
+IS 
+BEGIN  
+INSERT into Account (Id, Username, Password)  
+VALUES (a_id,a_uname,a_password);  
+COMMIT;  
+END; 
+
+
+begin
+insert_account('','Admin','Admin');
+end;
