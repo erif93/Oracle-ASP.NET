@@ -10,14 +10,19 @@ namespace SPDemo.Models
 {
     public class ItemDB
     {
-        //create Conection string
+        public int ID { get; set; }
+        public string NAME { get; set; }
+        public decimal PRICE { get; set; }
+        public decimal STOCK { get; set; }
 
-        string cs = ConfigurationManager.ConnectionStrings["MyContext"].ConnectionString;
+        public ItemDB() { }
+        //create Conection string
+        string cs = ConfigurationManager.ConnectionStrings["OracleDBContext"].ConnectionString;
 
         //return list of all item
-        public List<ITEM> ListAll()
+        public List<ItemDB> ListAll()
         {
-            List<ITEM> lst = new List<ITEM>();
+            List<ItemDB> lst = new List<ItemDB>();
             OracleConnection con = new OracleConnection();
             con.ConnectionString = cs;
             con.Open();
@@ -27,7 +32,7 @@ namespace SPDemo.Models
             OracleDataReader rdr = com.ExecuteReader();
             while (rdr.Read())
             {
-                lst.Add(new ITEM
+                lst.Add(new ItemDB
                 {
                     ID = Convert.ToInt32(rdr["ID"]),
                     NAME = rdr["NAME"].ToString(),
@@ -39,7 +44,7 @@ namespace SPDemo.Models
         }
 
         //Method for Adding an ItemDB  
-        public int Add(ITEM itemDB)
+        public int Add(ItemDB itemDB)
         {
             int i;
             using (OracleConnection con = new OracleConnection(cs))
@@ -59,7 +64,7 @@ namespace SPDemo.Models
         }
 
         //Method for Updating ItemDB record  
-        public int Update(ITEM itemDB)
+        public int Update(ItemDB itemDB)
         {
             int i;
             using (OracleConnection con = new OracleConnection(cs))

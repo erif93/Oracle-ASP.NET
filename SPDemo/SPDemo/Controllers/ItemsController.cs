@@ -22,12 +22,12 @@ namespace SPDemo.Controllers
             return Json(itemDB.ListAll(), JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult Add(ITEM item)
+        public JsonResult Add(ItemDB item)
         {
             return Json(itemDB.Add(item), JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult Update(ITEM item)
+        public JsonResult Update(ItemDB item)
         {
             return Json(itemDB.Update(item), JsonRequestBehavior.AllowGet);
         }
@@ -42,5 +42,6 @@ namespace SPDemo.Controllers
         {
             return Json(itemDB.Delete(ID), JsonRequestBehavior.AllowGet);
         }
+
     }
 }
