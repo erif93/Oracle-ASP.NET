@@ -1,0 +1,8 @@
+create or replace function getmaxid
+   return number
+is
+   maxId number(2):=0;
+begin
+   select max(Id) into maxId from transmaster;
+   return maxId;
+end getmaxId;?
