@@ -17,7 +17,7 @@ namespace SPDemo.Models
 
         public ItemDB() { }
         //create Conection string
-        string cs = ConfigurationManager.ConnectionStrings["OracleDBContext"].ConnectionString;
+        string cs = ConfigurationManager.ConnectionStrings["TOKO"].ConnectionString;
 
         //return list of all item
         public List<ItemDB> ListAll()
