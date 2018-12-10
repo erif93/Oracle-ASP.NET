@@ -16,7 +16,6 @@ namespace SPDemo.Models
         public int PRICE { get; set; }
         public int ID_ITEM { get; set; }
         public int ID_TRANSAKSI { get; set; }
-        public DateTime CREATEDATE { get; set; }
         public int TOTAL { get; set; }
 
         public TransactionDB() { }

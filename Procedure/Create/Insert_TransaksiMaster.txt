@@ -1,16 +1,16 @@
-CREATE OR REPLACE PROCEDURE insert_transmaster (  
-i_id Transmaster.Id%TYPE,  
-i_date Transmaster.CreateDate%TYPE
+create or replace PROCEDURE insert_transmaster (  
+i_date IN Transmaster.CreateDate%TYPE,
+i_total IN Transmaster.Total%TYPE
 )
 IS 
 BEGIN  
-INSERT into Transmaster (Id, CreateDate)  
-VALUES (i_id,i_date);  
+INSERT into Transmaster (Total, CreateDate)  
+VALUES (i_total,i_date);  
 COMMIT;  
-END;   
+END;? 
 
 begin
-insert_transmaster('1',SYSDATE);
+insert_transmaster('20000',SYSDATE);
 end;
 
 

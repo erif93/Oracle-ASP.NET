@@ -1,19 +1,9 @@
-create or replace 
-   procedure getdata
-is
-
- cursor kc_data is select Name,Price,Stock from Item;
-
-kc_rec kc_data%rowtype;
-begin
-for kc_rec in kc_data loop
- dbms_output.put_line('---------------------------------');
-      dbms_output.put_line('Nama Item : ' || kc_rec.Name);
-      dbms_output.put_line('Harga : ' || kc_rec.Price);
-      dbms_output.put_line('Stock : ' || kc_rec.Stock);
-end loop;
-end;
+create or replace PROCEDURE GETITEMALL(itemCur OUT SYS_REFCURSOR )   
+IS   
+BEGIN   
+OPEN itemCur FOR SELECT * FROM "ITEM";   
+END;?
 
 begin
-getdata;
+getitemall;
 end;
