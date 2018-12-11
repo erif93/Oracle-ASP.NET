@@ -1,31 +1,74 @@
-﻿@{
+﻿@model List<SPDemo.Models.FileDTO>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div>
+    <br />
+    <h2>Upload File</h2>
+    @*Name: <input type="text" id="txtName" /><br />*@
+    File: <input type="file" id="myFile" /><br />
+    <input type="button" id="btnUpload" value="Upload" />
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+<div>
+    <br />
+    <hr />
+    <h4>Download Here</h4>
+    <div id="container">
+        <ul>
+            @foreach (var fileObj in Model)
+            {
+                <li><span>@fileObj.FileActualName</span><a href="#" class="download" uname="@fileObj.FileUniqueName" id="btnDownload">  Download</a></li>
+            }
+        </ul>
     </div>
 </div>
+
+@section Scripts{
+
+    <script type="text/javascript">
+        debugger;
+        $(document).ready(function () {
+            $(".download").click(function () {
+                var uniquename = $(this).attr('uname');
+                console.log(uniquename);
+                var url = "http://localhost:3005/api/FilesData/DownloadFile?uniqueName=" + uniquename;
+                window.open(url);
+            });
+
+            //$("#myFile").change(function () {
+            //    $("#btnUpload").trigger('click');
+            //});
+        });
+    </script>
+    <script type="text/javascript">
+        $("#btnUpload").click(function () {
+            debugger;
+            var data = new FormData();
+            var files = $("#myFile").get(0).files;
+
+            //add the uploaded image content to the form data collection
+            if (files.length > 0) {
+                data.append("UploadedFiles", files[0]);
+            }
+
+            //other data
+            data.append("Name", $("#txtName").val());
+
+            var ajaxRequest = $.ajax({
+                type: "POST",
+                url: "http://localhost:3005/api/FilesData/UploadFile",
+                contentType: false,
+                processData: false,
+                data: data,
+                success: function (response) {
+                    alert('File Uploaded');
+                    console.log(response);
+                }
+            });
+            return false;
+        });
+    </script>
+}
