@@ -18,7 +18,7 @@ namespace SPDemo.Models
 
         public ItemDB() { }
         //create Conection string
-        string cs = ConfigurationManager.ConnectionStrings["OracleDBContext"].ConnectionString;
+        string cs = ConfigurationManager.ConnectionStrings["MyContext"].ConnectionString;
 
         //Inline QUERY
         //return list of all item
