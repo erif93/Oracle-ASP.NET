@@ -1,11 +1,13 @@
-CREATE OR REPLACE PROCEDURE delete_item (  
-item_id Item.Id%TYPE
-)
-IS 
-BEGIN  
-delete from item where Id=item_id;
-COMMIT;  
-END;   
+create or replace PROCEDURE delete_ITEM(
+       i_id IN Item.Id%TYPE)
+IS
+BEGIN
+
+  Delete from ITEM WHERE id=i_id;
+  
+  COMMIT;
+
+END;  
 
 begin
 delete_item('3');

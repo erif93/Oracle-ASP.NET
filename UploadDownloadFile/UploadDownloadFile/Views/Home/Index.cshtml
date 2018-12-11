@@ -1,0 +1,74 @@
+﻿@model List<UploadDownloadFile.Models.FileDTO>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <br />
+    <h2>Upload File</h2>
+    @*Name: <input type="text" id="txtName" /><br />*@
+    File: <input type="file" id="myFile" /><br />
+    <input type="button" id="btnUpload" value="Upload" />
+</div>
+
+<div>
+    <br />
+    <hr />
+    <h4>Download Here</h4>
+    <div id="container">
+        <ul>
+            @foreach (var fileObj in Model)
+            {
+                <li><span>@fileObj.FileActualName</span><a href="#" class="download" uname="@fileObj.FileUniqueName" id="btnDownload">  Download</a></li>
+            }
+        </ul>
+    </div>
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript">
+        debugger;
+        $(document).ready(function () {
+            $(".download").click(function () {
+                var uniquename = $(this).attr('uname');
+                console.log(uniquename);
+                var url = "http://localhost:3005/api/FilesData/DownloadFile?uniqueName=" + uniquename;
+                window.open(url);
+            });
+
+            //$("#myFile").change(function () {
+            //    $("#btnUpload").trigger('click');
+            //});
+        });
+    </script>
+    <script type="text/javascript">
+        $("#btnUpload").click(function () {
+            debugger;
+            var data = new FormData();
+            var files = $("#myFile").get(0).files;
+
+            //add the uploaded image content to the form data collection
+            if (files.length > 0) {
+                data.append("UploadedFiles", files[0]);
+            }
+
+            //other data
+            data.append("Name", $("#txtName").val());
+
+            var ajaxRequest = $.ajax({
+                type: "POST",
+                url: "http://localhost:3005/api/FilesData/UploadFile",
+                contentType: false,
+                processData: false,
+                data: data,
+                success: function (response) {
+                    alert('File Uploaded');
+                    console.log(response);
+                }
+            });
+            return false;
+        });
+    </script>
+}
