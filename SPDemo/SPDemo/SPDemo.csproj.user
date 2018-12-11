@@ -9,10 +9,6 @@
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <UseIISExpress>true</UseIISExpress>
-<<<<<<< HEAD
-    <ProjectView>ShowAllFiles</ProjectView>
-=======
->>>>>>> 290364b1bb1b1e1f1c70cf83f24463a1dd0ab11b
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
