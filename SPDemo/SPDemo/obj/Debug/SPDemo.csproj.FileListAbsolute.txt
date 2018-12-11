@@ -143,7 +143,6 @@ C:\Users\Fadhila Putri\Documents\github\New folder\Oracle-ASP.NET\SPDemo\SPDemo\
 C:\Users\Fadhila Putri\Documents\github\New folder\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.dll
 C:\Users\Fadhila Putri\Documents\github\New folder\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.pdb
 =======
-<<<<<<< HEAD
 D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\csc.exe
 D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -196,7 +195,6 @@ D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.We
 D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Net.Http.Formatting.xml
 D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.xml
 D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.WebHost.xml
-=======
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\csc.exe
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll

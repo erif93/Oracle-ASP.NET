@@ -216,11 +216,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Items\Index.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Accounts\Index.cshtml" />
-=======
     <Content Include="Views\Transactions\Index.cshtml" />
->>>>>>> 78bb02bc2127fb373c083917fd31a3e8023c9e52
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
