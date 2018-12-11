@@ -1,15 +1,16 @@
-CREATE OR REPLACE PROCEDURE updateitem (   
-p_1 IN Item.Id%TYPE,
-p_2 IN Item.Name%TYPE,
-p_3 IN Item.Price%TYPE,
-p_4 IN Item.Stock%TYPE  
-)  
-IS  
-BEGIN  
-UPDATE Item SET Name=p_2, Price=p_3,
-Stock=p_4 WHERE id=p_1;  
-COMMIT;  
-END;
+create or replace PROCEDURE update_ITEM(
+       i_id IN Item.Id%TYPE,
+           i_name IN Item.Name%TYPE,
+           i_price IN Item.Price%TYPE,  
+           i_stock  IN Item.Stock%TYPE)
+IS
+BEGIN
+
+  UPDATE ITEM SET Name = i_name, Price = i_price, Stock = i_stock where Id = i_id;
+  
+  COMMIT;
+
+END;?
 
 
 begin

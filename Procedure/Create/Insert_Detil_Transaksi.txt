@@ -1,18 +1,18 @@
-CREATE OR REPLACE PROCEDURE insert_detiltransaksi (  
-detil_id Detil_Transaksi.Id%TYPE,  
-detil_item Detil_Transaksi.Id_Item%TYPE,
-detil_transmaster Detil_Transaksi.Id_Transaksi%TYPE,
-detil_qty Detil_Transaksi.Qty%TYPE,
-detil_createdate Detil_Transaksi.CreateDate%TYPE
-
+create or replace PROCEDURE insert_detiltransaksi ( 
+detil_item IN Detil_Transaksi.Id_Item%TYPE,
+detil_transmaster IN Detil_Transaksi.Id_Transaksi%TYPE,
+detil_name IN Detil_Transaksi.Name%TYPE,
+detil_price IN Detil_Transaksi.Price%TYPE,
+detil_qty IN Detil_Transaksi.Qty%TYPE,
+detil_createdate IN Detil_Transaksi.CreateDate%TYPE
 )
 IS 
 BEGIN  
-INSERT into Detil_Transaksi (Id, Id_Item,Id_Transaksi,Qty,CreateDate)  
-VALUES (detil_id,detil_item,detil_transmaster,detil_qty,detil_createdate);  
+INSERT into Detil_Transaksi (Id_Item,Id_Transaksi,Name,Price,Qty,CreateDate)  
+VALUES (detil_item,detil_transmaster,detil_name,detil_price,detil_qty,detil_createdate);  
 COMMIT;  
-END;   
+END;?  
 
 begin
-insert_detiltransaksi('3','1','1',3,SYSDATE);
+insert_detiltransaksi(3,1,'kacang',4000,3,SYSDATE);
 end;

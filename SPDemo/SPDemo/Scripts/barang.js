@@ -114,7 +114,7 @@ function getbyID(itemID) {
     $('#Stock').css('border-color', 'lightgrey');
     $.ajax({
         url: "/Items/getbyID/" + itemID,
-        typr: "GET",
+        type: "GET",
         contentType: "application/json;charset=UTF-8",
         dataType: "json",
         success: function (result) {
