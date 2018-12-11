@@ -139,3 +139,9 @@ D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\Newtonsof
 D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.csprojResolveAssemblyReference.cache
 D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.dll
 D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.pdb
+D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Net.Http.Formatting.dll
+D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.dll
+D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.WebHost.dll
+D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Net.Http.Formatting.xml
+D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.xml
+D:\NISA\BOOTCAMP20\GIT\oracle-asp.net\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.WebHost.xml

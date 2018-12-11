@@ -11,8 +11,7 @@ namespace SPDemo.Controllers
     {
         public ActionResult Index()
         {
-            var files = DummyDAL.GetAllFiles();
-            return View(files);
+            return View();
         }
 
         public ActionResult About()
