@@ -17,15 +17,23 @@ namespace SPDemo.Controllers
             return View();
         }
         
-        public JsonResult Add(TransactionDB transac)
+        [HttpPost]
+        public JsonResult Add(IEnumerable<TransactionDB> transac)
         {
-            return Json(transacDB.Add(transac), JsonRequestBehavior.AllowGet);
+            bool status = false;
+            int a = transacDB.Add(transac);
+
+            if (a != 0)
+            {
+                status = true;
+            }
+            return new JsonResult { Data = new { status = status } };
         }
 
         public JsonResult GetItem()
         {
             var Item = itemDB.ListAll().ToList();
-            return Json(Item, JsonRequestBehavior.AllowGet);
+            return new JsonResult { Data =Item, JsonRequestBehavior =  JsonRequestBehavior.AllowGet };
         }
     }
 }
