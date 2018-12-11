@@ -57,7 +57,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
       <Private>True</Private>
@@ -142,6 +144,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -151,6 +154,41 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\datatables\dataTables.bootstrap.js" />
+    <Content Include="Content\datatables\jquery.dataTables.min.css" />
+    <Content Include="Content\datatables\jquery.dataTables.min.js" />
+    <Content Include="Content\datatables\license.txt" />
+    <Content Include="Content\datatables\media\css\dataTables.bootstrap.css" />
+    <Content Include="Content\datatables\media\css\dataTables.bootstrap.min.css" />
+    <Content Include="Content\datatables\media\css\dataTables.foundation.css" />
+    <Content Include="Content\datatables\media\css\dataTables.foundation.min.css" />
+    <Content Include="Content\datatables\media\css\dataTables.jqueryui.css" />
+    <Content Include="Content\datatables\media\css\dataTables.jqueryui.min.css" />
+    <Content Include="Content\datatables\media\css\jquery.dataTables.css" />
+    <Content Include="Content\datatables\media\css\jquery.dataTables.min.css" />
+    <Content Include="Content\datatables\media\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\datatables\media\images\favicon.ico" />
+    <Content Include="Content\datatables\media\images\sort_asc.png" />
+    <Content Include="Content\datatables\media\images\sort_asc_disabled.png" />
+    <Content Include="Content\datatables\media\images\sort_both.png" />
+    <Content Include="Content\datatables\media\images\sort_desc.png" />
+    <Content Include="Content\datatables\media\images\sort_desc_disabled.png" />
+    <Content Include="Content\datatables\media\js\dataTables.bootstrap.js" />
+    <Content Include="Content\datatables\media\js\dataTables.bootstrap.min.js" />
+    <Content Include="Content\datatables\media\js\dataTables.foundation.js" />
+    <Content Include="Content\datatables\media\js\dataTables.foundation.min.js" />
+    <Content Include="Content\datatables\media\js\dataTables.jqueryui.js" />
+    <Content Include="Content\datatables\media\js\dataTables.jqueryui.min.js" />
+    <Content Include="Content\datatables\media\js\jquery.dataTables.js" />
+    <Content Include="Content\datatables\media\js\jquery.dataTables.min.js" />
+    <Content Include="Content\datatables\media\js\jquery.js" />
+    <Content Include="Content\datatables\sort_asc.png" />
+    <Content Include="Content\datatables\sort_asc_disabled.png" />
+    <Content Include="Content\datatables\sort_both.png" />
+    <Content Include="Content\datatables\sort_desc.png" />
+    <Content Include="Content\datatables\sort_desc_disabled.png" />
+    <Content Include="Content\icon\shopping-cart-loaded.png" />
+    <Content Include="Content\icon\shopping-cart.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -158,6 +196,11 @@
     <Content Include="Scripts\barang.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\datatables\.bower.json" />
+    <Content Include="Content\datatables\bower.json" />
+    <Content Include="Content\datatables\Contributing.md" />
+    <Content Include="Content\datatables\media\images\Sorting icons.psd" />
+    <Content Include="Content\datatables\Readme.md" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -169,8 +212,11 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Transaction.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -185,6 +231,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Items\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

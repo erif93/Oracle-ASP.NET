@@ -26,7 +26,7 @@ namespace SPDemo.Models
             OracleConnection con = new OracleConnection();
             con.ConnectionString = cs;
             con.Open();
-            string query = "select * from toko.item";
+            string query = "select * from TOKO.ITEM";
             OracleCommand com = new OracleCommand(query, con);
             //com.CommandType = CommandType.StoredProcedure;
             OracleDataReader rdr = com.ExecuteReader();
