@@ -1,5 +1,8 @@
 ﻿//Load Data in Table when documents is ready  
 $(document).ready(function () {
+    $('#datatable').DataTable({
+        "ajax": loadData()
+    });
     loadData();
 });
 
@@ -8,6 +11,7 @@ function loadData() {
     $.ajax({
         url: "/Items/List",
         type: "GET",
+        async:false,
         contentType: "application/json;charset=utf-8",
         dataType: "json",
         success: function (result) {

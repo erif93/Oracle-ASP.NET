@@ -1,12 +1,37 @@
-﻿
-@{
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewBag.Title = "Index";
 }
 
+<style>
+    body {
+        background-image: repeating-radial-gradient(#f8f8f8, #cef1eb);
+    }
+
+    th {
+        height: 20px;
+        width: 20px;
+        text-align: center;
+    }
+
+    tbody :hover {
+        background-color: #f7d7d7;
+    }
+    thead {
+        background-color:darksalmon;
+        color:white;
+    }
+    h2{
+        text-decoration-line: underline;
+        text-align:center;
+    }
+    
+</style>
+
 <div class="container">
-    <h2>Barang Record</h2>
+    <h2>BARANG RECORD</h2>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Add New Item</button><br /><br />
-    <table class="table table-bordered table-hover">
+    <table class="table table-bordered table-striped" id="datatable">
         <thead>
             <tr>
                 <th>
@@ -31,7 +56,7 @@
 </div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="background-color: #daf1e9;">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">×</button>
                 <h4 class="modal-title" id="myModalLabel">Add Employee</h4>
@@ -40,7 +65,7 @@
                 <form>
                     <div class="form-group">
                         <label for="EmployeeId">ID</label>
-                        <input type="text" class="form-control" id="ID" placeholder="Id" disabled="disabled" />
+                        <input type="text" class="form-control" id="ID" placeholder="Id" disabled="disabled"/>
                     </div>
                     <div class="form-group">
                         <label for="Name">Name</label>
@@ -48,11 +73,11 @@
                     </div>
                     <div class="form-group">
                         <label for="Stock">Price</label>
-                        <input type="text" class="form-control" id="Price" placeholder="Price" />
+                        <input type="number" class="form-control" id="Price" placeholder="Price"/>
                     </div>
                     <div class="form-group">
                         <label for="Price">Stock</label>
-                        <input type="text" class="form-control" id="Stock" placeholder="Stock" />
+                        <input type="number" class="form-control" id="Stock" placeholder="Stock" />
                     </div>
                 </form>
             </div>
@@ -64,11 +89,18 @@
         </div>
     </div>
 </div>
-
 @section Scripts{
 <script src="~/Scripts/jquery-1.10.2.js"></script>
 <script src="~/Scripts/bootstrap.js"></script>
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<script src="~/Scripts/barang.js"></script>  
+
+<script src="~/Content/datatables/jquery.dataTables.min.js"></script>
+<link href="~/Content/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+<script src="~/Content/sweetalert/sweetalert.min.js"></script>
+<link href="~/Content/sweetalert/sweetalert.css" rel="stylesheet" />
 <script src="~/Scripts/barang.js"></script>
 @Scripts.Render("~/bundles/jqueryval")
 }
