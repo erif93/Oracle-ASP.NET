@@ -27,6 +27,7 @@
         text-decoration-line: underline;
         text-align: center;
     }
+    
 </style>
 
 <body>
@@ -74,6 +75,9 @@
                             <thead style="background-color: darksalmon;color: white;">
                                 <tr>
                                     <th style="width:25%">
+                                        Item Id
+                                    </th>
+                                    <th style="width:25%">
                                         Item Name
                                     </th>
                                     <th style="width:10%">
@@ -88,6 +92,9 @@
                                     <th style="width:5%">
                                         Total
                                     </th>
+                                    <th style="width:5%">
+                                        Delete
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody id="cartlist"></tbody>
@@ -98,6 +105,7 @@
                     <button type="button" class="btn btn-primary" id="Save" onclick="Save()" style="cursor: pointer;font-weight: bold;">Add</button>
                     <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="Edit()">Update</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" style="cursor: pointer;font-weight: bold;">Close</button>
+                    <input type="number" id="total"/>
                 </div>
             </div>
         </div>
