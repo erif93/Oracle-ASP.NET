@@ -44,8 +44,8 @@ function minmax(value, min, max) {
 }
 
 function AddCart(Id, qty) {
-    var qtyy = '#qty' + qty;
     debugger;
+    var qtyy = '#qty' + qty;
     $.ajax({
         url: '/Items/GetbyID/' + Id,
         dataType: 'json',
@@ -57,6 +57,8 @@ function AddCart(Id, qty) {
             var html = '';
             html = html + '<tr>';
 
+            html = html + '<td>' + data.ID + '</td>';
+
             html = html + '<td>' + data.NAME + '</td>';
 
             html = html + '<td>' + data.PRICE + '</td>';
@@ -67,11 +69,42 @@ function AddCart(Id, qty) {
 
             html = html + '<td>' + (data.PRICE * cart.Quantity) + '</td>';
 
+            html = html + '<td><button type="button" class="removebutton" id="delete" onclick="Delete()" style="cursor: pointer;font-weight: bold;">Delete</button></td>'
+
             html = html + '</tr>';
 
             $('#cartlist').append(html);
             $('#btncart').attr('src', '/Content/icon/shopping-cart-loaded.png');
-            //$('#btncart').text('~/Content/icon/shopping-cart.png')
+            swal("Item Berhasil Masuk Keranjang");
+            $('#qty' + qty).val('');
+
+            var rowCount = document.getElementById('tablecart').rows.length;
+            if (rowCount == 2) {
+                var countTotal = 0;
+                countTotal = countTotal + (data.PRICE * cart.Quantity);
+                $('#total').val(countTotal);
+            } else {
+                var countTotal = $('#total');
+                countTotal = countTotal + (data.PRICE * cart.Quantity);
+                $('#total').val(countTotal);
+            }
         }
     });
+}
+
+function Delete() {
+    debugger;
+    $('#delete').closest('tr').remove();
+    var rowCount = document.getElementById('tablecart').rows.length;
+    if (rowCount == 1) {
+        $('#btncart').attr('src', '/Content/icon/shopping-cart.png');
+    }
+}
+function Total() {
+    debugger;
+    var rowCount = document.getElementById('tablecart').rows.length;
+    var total = 0;
+    for (var i = 0 ; i <= rowCount; i++) {
+        console.log('Row ' + parseFloat(i + 1) + ' : ' + document.getElementById('tablecart').rows[i].cells.length + ' column');
+    }
 }
