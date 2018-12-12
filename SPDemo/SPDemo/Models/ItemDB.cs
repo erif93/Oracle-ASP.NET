@@ -18,13 +18,8 @@ namespace SPDemo.Models
 
         public ItemDB() { }
         //create Conection string
-<<<<<<< HEAD
-        string cs = ConfigurationManager.ConnectionStrings["TOKO"].ConnectionString;
-
-=======
         string cs = ConfigurationManager.ConnectionStrings["OracleDbContext"].ConnectionString;
        
->>>>>>> 404d032594d2095003877f1c2ccb0834f50cd19b
         //Inline QUERY
         //return list of all item
         //public List<ItemDB> ListAll()
@@ -57,17 +52,6 @@ namespace SPDemo.Models
             OracleConnection con = new OracleConnection();
             con.ConnectionString = cs;
             con.Open();
-<<<<<<< HEAD
-            string query = "select * from transaction.item";
-            OracleCommand com = new OracleCommand(query, con);
-            //com.CommandType = CommandType.StoredProcedure;
-            //OracleDataReader rdr = com.ExecuteReader();
-=======
-            string query = "select * from TOKO.ITEM";
-            OracleCommand com = new OracleCommand(query, con);
-            //com.CommandType = CommandType.StoredProcedure;
-
->>>>>>> 404d032594d2095003877f1c2ccb0834f50cd19b
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = con;
             cmd.CommandText = "TOKO.GETITEMALL";
@@ -116,19 +100,6 @@ namespace SPDemo.Models
             using (OracleConnection con = new OracleConnection(cs))
             {
                 con.Open();
-<<<<<<< HEAD
-                //string query = "Insert into TRANSACTION.ITEM(Name,Price,Stock) VALUES (:2, :3, :4)";
-                OracleCommand com = con.CreateCommand();
-                //com.CommandText = query;
-=======
-                OracleCommand com = con.CreateCommand();
->>>>>>> 404d032594d2095003877f1c2ccb0834f50cd19b
-                com.CommandType = CommandType.Text;
-                //com.CommandType = CommandType.StoredProcedure;
-                //com.Parameters.Add("2", OracleDbType.Varchar2, 50).Value = itemDB.NAME.ToString();
-                //com.Parameters.Add("3", OracleDbType.Double, 10).Value = Convert.ToDouble(itemDB.PRICE);
-                //com.Parameters.Add("4", OracleDbType.Int16, 10).Value = Convert.ToInt16(itemDB.STOCK);
-                //i = com.ExecuteNonQuery();
                 string query = "TOKO.INSERT_ITEM";
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = con;
@@ -138,10 +109,6 @@ namespace SPDemo.Models
                 cmd.Parameters.Add(new OracleParameter("i_price", OracleDbType.Varchar2)).Value = Convert.ToInt32(itemDB.PRICE);
                 cmd.Parameters.Add(new OracleParameter("i_stock", OracleDbType.Varchar2)).Value = Convert.ToInt32(itemDB.STOCK);
                 i = cmd.ExecuteNonQuery();
-<<<<<<< HEAD
-                
-=======
->>>>>>> 404d032594d2095003877f1c2ccb0834f50cd19b
             }
             return i;
         }
@@ -176,29 +143,6 @@ namespace SPDemo.Models
             using (OracleConnection con = new OracleConnection(cs))
             {
                 con.Open();
-<<<<<<< HEAD
-                //string query = "Update TRANSACTION.ITEM SET name=:2, price=:3, stock=:4 WHERE id=:1";
-                OracleCommand com = con.CreateCommand();
-                //com.CommandText = query;
-=======
-                OracleCommand com = con.CreateCommand();
->>>>>>> 404d032594d2095003877f1c2ccb0834f50cd19b
-                com.CommandType = CommandType.Text;
-                //com.CommandType = CommandType.StoredProcedure;
-<<<<<<< HEAD
-                //com.Parameters.Add("2", OracleDbType.Varchar2, 50).Value = itemDB.NAME.ToString();
-                //com.Parameters.Add("3", OracleDbType.Int32, 10).Value = Convert.ToInt32(itemDB.PRICE);
-                //com.Parameters.Add("4", OracleDbType.Int32, 10).Value = Convert.ToInt32(itemDB.STOCK);
-=======
-                com.Parameters.Add("2", OracleDbType.Varchar2, 50).Value = itemDB.NAME.ToString();
-                com.Parameters.Add("3", OracleDbType.Int32, 10).Value = Convert.ToInt32(itemDB.PRICE);
-                com.Parameters.Add("4", OracleDbType.Int32, 10).Value = Convert.ToInt32(itemDB.STOCK);
-<<<<<<< HEAD
-                
-=======
->>>>>>> 3fde138964ad8e131b95b116b450cb029697fbb8
-
->>>>>>> 404d032594d2095003877f1c2ccb0834f50cd19b
                 string query = "TOKO.UPDATE_ITEM";
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = con;
@@ -238,24 +182,6 @@ namespace SPDemo.Models
             using (OracleConnection con = new OracleConnection(cs))
             {
                 con.Open();
-<<<<<<< HEAD
-                //string query = "Delete from TRANSACTION.ITEM WHERE id=:1";
-                OracleCommand com = con.CreateCommand();
-                //com.CommandText = query;
-                com.CommandType = CommandType.Text;
-                //com.CommandType = CommandType.StoredProcedure;
-                com.Parameters.Add("1", OracleDbType.Int32, 10).Value = Convert.ToInt32(ID);
-                i = com.ExecuteNonQuery();
-=======
-                OracleCommand com = con.CreateCommand();
-                   com.CommandType = CommandType.Text;
-                //com.CommandType = CommandType.StoredProcedure;
-<<<<<<< HEAD
-                //com.Parameters.Add("1", OracleDbType.Int32, 10).Value = Convert.ToInt32(ID);
-=======
-                com.Parameters.Add("1", OracleDbType.Int32, 10).Value = Convert.ToInt32(ID);
->>>>>>> 404d032594d2095003877f1c2ccb0834f50cd19b
->>>>>>> 3fde138964ad8e131b95b116b450cb029697fbb8
                 string query = "TOKO.DELETE_ITEM";
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = con;
