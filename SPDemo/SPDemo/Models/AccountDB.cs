@@ -54,10 +54,32 @@ namespace SPDemo.Models
                 com.CommandType = CommandType.Text;
                 //com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.Add("2", OracleDbType.Varchar2, 50).Value = accountDB.USERNAME.ToString();
-                com.Parameters.Add("3", OracleDbType.Varchar2, 50).Value = EnryptString(accountDB.PASSWORD.ToString());
+                com.Parameters.Add("3", OracleDbType.Varchar2, 50).Value = encrypt(accountDB.PASSWORD.ToString());
                 i = com.ExecuteNonQuery();
             }
             return i;
+        }
+
+        public AccountDB Login(AccountDB account)
+        {
+            AccountDB lst = new AccountDB();
+            using (OracleConnection con = new OracleConnection(cs))
+            {
+                con.Open();
+                string query = "select * from transaction.account where username=:2 and password=:3";
+                OracleCommand com = con.CreateCommand();
+                com.CommandText = query;
+                com.CommandType = CommandType.Text;
+                //com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.Add("2", OracleDbType.Varchar2, 50).Value = account.USERNAME.ToString();
+                com.Parameters.Add("3", OracleDbType.Varchar2, 50).Value = encrypt(account.PASSWORD.ToString());
+                OracleDataReader rdr = com.ExecuteReader();
+                while (rdr.Read())
+                {
+                    lst.ID = Convert.ToInt16(rdr["ID"]);                        
+                }
+            }
+            return lst;
         }
 
         //Method for Updating ItemDB record  
@@ -73,7 +95,7 @@ namespace SPDemo.Models
                 com.CommandType = CommandType.Text;
                 //com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.Add("2", OracleDbType.Varchar2, 50).Value = accountDB.USERNAME.ToString();
-                com.Parameters.Add("3", OracleDbType.Varchar2, 50).Value = EnryptString(accountDB.PASSWORD.ToString());
+                com.Parameters.Add("3", OracleDbType.Varchar2, 50).Value = encrypt(accountDB.PASSWORD.ToString());
                 com.Parameters.Add("1", OracleDbType.Int32, 10).Value = Convert.ToInt32(accountDB.ID);
                 i = com.ExecuteNonQuery();
             }
@@ -96,8 +118,17 @@ namespace SPDemo.Models
                 i = com.ExecuteNonQuery();
             }
             return i;
-        }        
-
+        }
+        //Ini md5
+        public static string encrypt(string x)
+        {
+            System.Security.Cryptography.MD5CryptoServiceProvider test123 = new System.Security.Cryptography.MD5CryptoServiceProvider();
+            byte[] data = System.Text.Encoding.ASCII.GetBytes(x);
+            data = test123.ComputeHash(data);
+            String md5Hash = System.Text.Encoding.ASCII.GetString(data);
+            return md5Hash;
+        }
+        //ini Encode ke base64
         public string EnryptString(string strEncrypted)
         {
             byte[] b = System.Text.ASCIIEncoding.ASCII.GetBytes(strEncrypted);
