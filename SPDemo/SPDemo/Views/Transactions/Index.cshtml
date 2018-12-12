@@ -2,6 +2,7 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewBag.Title = "Index";
 }
+<h2>Master details entry form</h2>
 
 <style>
     body {
@@ -112,51 +113,6 @@
     </div>
 </body>
 
-@*<h2>Master details entry form</h2>
-<div class="container">
-   
-    <div class="details">
-        <h2>
-            Order items
-        </h2>
-        <table class="table table-responsive">
-            <tr>
-                <td>Item</td>
-                <td>Quantity</td>
-                <td>Price</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr class="mycontainer" id="mainrow">
-                <td>
-                    <select id="Item" class="pc form-control" @*onchange="LoadProduct(this)">*@
-                        @*<option>Select</option>
-                    </select>
-                    <span class="error">Select Item</span>
-                    
-                </td>
-                <td>
-                    <input type="text" id="Qty" class="quantity form-control" />
-                    <span class="error">Valid Quantity required</span>
-                </td>
-                <td>
-                    <input type="text" id="Price" class="rate form-control" />
-                    <span class="error">Valid Price required</span>
-                </td>
-                <td>
-                    <input type="button" id="add" value="add" style="width:80px" class="btn btn-success" />
-                </td>
-            </tr>
-        </table>
-        <div id="orderItems">
-            <table class="table table-responsive" id="orderdetailsItems"></table>
-            <span id="orderItemError" style="color:red"></span>
-        </div>
-        <div style="padding:10px 0; text-align:right">
-            <input type="text" id="Total"/>
-            <input id="submit" type="button" value="Save Order" class="btn btn-warning" style="padding:10px 20px" />
-        </div>
-    </div>
-</div>*@
 @section Scripts{
     <script src="~/Scripts/jquery-1.12.4.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>

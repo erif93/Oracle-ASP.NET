@@ -52,8 +52,8 @@ function Add() {
         contentType: "application/json;charset=utf-8",
         dataType: "json",
         success: function (result) {
-            loadData();
             $('#myModal').modal('hide');
+            loadData();
         },
         error: function (errormessage) {
             alert(errormessage.responseText);

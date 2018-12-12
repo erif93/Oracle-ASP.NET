@@ -40,8 +40,11 @@ function Add() {
         contentType: "application/json;charset=utf-8",
         dataType: "json",
         success: function (result) {
-            loadData();
+            $('#ID').val("");
+            $('#Username').val("");
+            $('#Password').val("");
             $('#myModal').modal('hide');
+            loadData();
         },
         error: function (errormessage) {
             alert(errormessage.responseText);
@@ -118,12 +121,13 @@ function getbyID(accountID) {
     });
     return false;
 }
-
 //Function for clearing the textboxes  
 function clearTextBox() {
     $('#ID').val("");
     $('#Username').val("");
     $('#Password').val("");
+    $('#btnUpdate').hide();
+    $('#btnAdd').show();
     $('#Username').css('border-color', 'lightgrey');
     $('#Password').css('border-color', 'lightgrey');
 }
