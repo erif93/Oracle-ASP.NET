@@ -93,11 +93,14 @@
                             <tbody id="cartlist"></tbody>
                         </table>
                     </form>
+                    
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="Save" onclick="Save()" style="cursor: pointer;font-weight: bold;">Add</button>
+                    <span id="orderItemError" style="color:red"></span>
+                    <button type="button" class="btn btn-primary" id="Save" style="cursor: pointer;font-weight: bold;">Check Out</button>
                     <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="Edit()">Update</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal" style="cursor: pointer;font-weight: bold;">Close</button>
+                    <button type="button" class="btn btn-default" id="Close"data-dismiss="modal" style="cursor: pointer;font-weight: bold;">Close</button>
+                    
                 </div>
             </div>
         </div>
