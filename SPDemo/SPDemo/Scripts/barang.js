@@ -8,6 +8,7 @@ $(document).ready(function () {
 
 //Load Data function  
 function loadData() {
+    debugger;
     $.ajax({
         url: "/Items/List",
         type: "GET",
