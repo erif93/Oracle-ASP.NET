@@ -18,8 +18,8 @@
             $('#tablecart tr').each(function (row, tr) {
                 transac = {
                     ID_ITEM: parseInt($(tr).find('td:eq(0)').text()),
-                    QTY: parseInt($(tr).find('td:eq(3)').text()),
-                    PRICE: parseInt($(tr).find('td:eq(1)').text()),
+                    QTY: parseInt($(tr).find('td:eq(4)').text()),
+                    PRICE: parseInt($(tr).find('td:eq(2)').text()),
                 }
                 list.push(transac);
             })
@@ -108,10 +108,7 @@ function minmax(value, min, max) {
 }
 
 function AddCart(Id, qty) {
-<<<<<<< HEAD
-=======
     debugger;
->>>>>>> 25145fddcba97f0f95475f2835b17a59a4b6feed
     var qtyy = '#qty' + qty;
     $.ajax({
         url: '/Items/GetbyID/'+Id,
