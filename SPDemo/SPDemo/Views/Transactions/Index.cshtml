@@ -1,143 +1,120 @@
-﻿
-@{
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewBag.Title = "Index";
 }
 
-@*<div class="container">
-    <h2>Insert Transaksi</h2>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Add New Transaction</button><br /><br />
-    @*<table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>
-                    ID
-                </th>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Price
-                </th>
-                <th>
-                    Stock
-                </th>
-            </tr>
-        </thead>
-        <tbody class="tbody"></tbody>
-    </table>*@
-@*</div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">×</button>
-                <h4 class="modal-title" id="myModalLabel">Add Transaction</h4>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="Item">Select Item</label>
-                        <select class="form-control" id="Item" placeholder="Item" />
-                        <input type="hidden" class="form-control" id="ItemOld" value="#Supplier" />
-                    </div>
-                    <div class="form-group">
-                        <label for="Qty">Qty</label>
-                        <input type="text" class="form-control" id="Qty" placeholder="Qty" />
-                    </div>
-                    <div class="form-group">
-                        <label for="Price">Price</label>
-                        <input type="text" class="form-control" id="Price" placeholder="Price" />
-                    </div>
-                    <div class="form-group">
-                        <label for="Total">Total</label>
-                        <input type="text" class="form-control" id="Total" placeholder="Total" />
-                    </div>
-                    
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Add</button>
-                <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="Update();">Update</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>*@
-
-@*@section Scripts{
-    <script src="~/Scripts/jquery-1.10.2.js"></script>
-    <script src="~/Scripts/bootstrap.js"></script>
-    <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <script src="~/Scripts/transaction.js"></script>
-    @Scripts.Render("~/bundles/jqueryval")
-}*@
-
-<h2>Master details entry form</h2>
-<div class="container">
-   
-    <div class="details">
-        <h2>
-            Order items
-        </h2>
-        <table class="table table-responsive">
-            <tr>
-                <td>Item</td>
-                <td>Quantity</td>
-                <td>Price</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr class="mycontainer" id="mainrow">
-                <td>
-                    <select id="Item" class="pc form-control" @*onchange="LoadProduct(this)"*@>
-                        <option>Select</option>
-                    </select>
-                    <span class="error">Select Item</span>
-                </td>
-                <td>
-                    <input type="text" id="Qty" class="quantity form-control" />
-                    <span class="error">Valid Quantity required</span>
-                </td>
-                <td>
-                    <input type="text" id="Price" class="rate form-control" />
-                    <span class="error">Valid Price required</span>
-                </td>
-                <td>
-                    <input type="button" id="add" value="add" style="width:80px" class="btn btn-success" />
-                </td>
-            </tr>
-        </table>
-        <div id="orderItems">
-            <table class="table table-responsive" id="orderdetailsItems"></table>
-            <span id="orderItemError" style="color:red"></span>
-        </div>
-        <div style="padding:10px 0; text-align:right">
-            <input type="text" id="Total"/>
-            <input id="submit" type="button" value="Save Order" class="btn btn-warning" style="padding:10px 20px" />
-        </div>
-    </div>
-</div>
-@section Scripts{
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/jquery-ui.css" rel="stylesheet" />
-    <script src="~/Scripts/jquery-ui.js"></script>
-    <script src="~/Scripts/transaction.js"></script>
-}
-    @*<script type="text/javascript">
-        $(function () {
-            $('#orderDate').datepicker({
-                dateFormat: 'mm-dd-yy'
-            })
-        })
-    </script>*@
 <style>
-    span.error {
-        display: block;
-        visibility: hidden;
-        color: red;
-        font-size: 90%;
+    body {
+        background-image: repeating-radial-gradient(#f8f8f8, #cef1eb);
     }
 
-    tr.error {
-        background-color: rgba(255,0,0,0.35);
+    th {
+        height: 20px;
+        width: 20px;
+        text-align: center;
+    }
+
+    tbody :hover {
+        background-color: #f7d7d7;
+    }
+
+    thead {
+        background-color: darksalmon;
+        color: white;
+    }
+
+    h2 {
+        text-decoration-line: underline;
+        text-align: center;
     }
 </style>
+
+<body>
+    <div class="container">
+        <h2>TRANSACTION</h2>
+        <a data-toggle="modal" data-target="#myModal" onclick="AddCart()">
+            <img id="btncart" src="~/Content/icon/shopping-cart.png" style="height:2rem; margin:12px;" />
+        </a>
+        <table class="table table-bordered table-striped" id="datatable">
+            <thead>
+                <tr>
+                    <th style="width:2%">
+                        No
+                    </th>
+                    <th style="width:25%">
+                        Name
+                    </th>
+                    <th style="width:10%">
+                        Price
+                    </th>
+                    <th style="width:10%">
+                        Stock
+                    </th>
+                    <th style="width:1%">
+                        Quantity
+                    </th>
+                    <th style="width:5%">
+                        Add
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+        </table>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: #daf1e9;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                    <h4 class="modal-title" id="myModalLabel">Cart</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <table class="table table-bordered table-striped" id="tablecart">
+                            <thead style="background-color: darksalmon;color: white;">
+                                <tr>
+                                    <th style="width:25%">
+                                        Item Name
+                                    </th>
+                                    <th style="width:10%">
+                                        Price
+                                    </th>
+                                    <th style="width:10%">
+                                        Stock
+                                    </th>
+                                    <th style="width:1%">
+                                        Quantity
+                                    </th>
+                                    <th style="width:5%">
+                                        Total
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="cartlist"></tbody>
+                        </table>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="Save" onclick="Save()" style="cursor: pointer;font-weight: bold;">Add</button>
+                    <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="Edit()">Update</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" style="cursor: pointer;font-weight: bold;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Scripts{
+    <script src="~/Scripts/jquery-1.12.4.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+
+    <script src="~/Content/datatables/jquery.dataTables.min.js"></script>
+    <link href="~/Content/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/Content/sweetalert/sweetalert.min.js"></script>
+    <link href="~/Content/sweetalert/sweetalert.css" rel="stylesheet" />
+    <script src="~/Scripts/transaksi.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

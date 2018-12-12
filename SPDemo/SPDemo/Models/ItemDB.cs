@@ -107,10 +107,10 @@ namespace SPDemo.Models
                 OracleCommand com = con.CreateCommand();
                 com.CommandType = CommandType.Text;
                 //com.CommandType = CommandType.StoredProcedure;
-                com.Parameters.Add("2", OracleDbType.Varchar2, 50).Value = itemDB.NAME.ToString();
-                com.Parameters.Add("3", OracleDbType.Double, 10).Value = Convert.ToDouble(itemDB.PRICE);
-                com.Parameters.Add("4", OracleDbType.Int16, 10).Value = Convert.ToInt16(itemDB.STOCK);
-                i = com.ExecuteNonQuery();
+                //com.Parameters.Add("2", OracleDbType.Varchar2, 50).Value = itemDB.NAME.ToString();
+                //com.Parameters.Add("3", OracleDbType.Double, 10).Value = Convert.ToDouble(itemDB.PRICE);
+                //com.Parameters.Add("4", OracleDbType.Int16, 10).Value = Convert.ToInt16(itemDB.STOCK);
+                //i = com.ExecuteNonQuery();
                 string query = "TOKO.INSERT_ITEM";
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = con;
@@ -157,9 +157,9 @@ namespace SPDemo.Models
                 OracleCommand com = con.CreateCommand();
                 com.CommandType = CommandType.Text;
                 //com.CommandType = CommandType.StoredProcedure;
-                com.Parameters.Add("2", OracleDbType.Varchar2, 50).Value = itemDB.NAME.ToString();
-                com.Parameters.Add("3", OracleDbType.Int32, 10).Value = Convert.ToInt32(itemDB.PRICE);
-                com.Parameters.Add("4", OracleDbType.Int32, 10).Value = Convert.ToInt32(itemDB.STOCK);
+                //com.Parameters.Add("2", OracleDbType.Varchar2, 50).Value = itemDB.NAME.ToString();
+                //com.Parameters.Add("3", OracleDbType.Int32, 10).Value = Convert.ToInt32(itemDB.PRICE);
+                //com.Parameters.Add("4", OracleDbType.Int32, 10).Value = Convert.ToInt32(itemDB.STOCK);
 
                 string query = "TOKO.UPDATE_ITEM";
                 OracleCommand cmd = new OracleCommand();
@@ -203,7 +203,7 @@ namespace SPDemo.Models
                 OracleCommand com = con.CreateCommand();
                    com.CommandType = CommandType.Text;
                 //com.CommandType = CommandType.StoredProcedure;
-                com.Parameters.Add("1", OracleDbType.Int32, 10).Value = Convert.ToInt32(ID);
+                //com.Parameters.Add("1", OracleDbType.Int32, 10).Value = Convert.ToInt32(ID);
                 string query = "TOKO.DELETE_ITEM";
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = con;
