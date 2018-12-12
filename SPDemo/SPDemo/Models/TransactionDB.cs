@@ -33,7 +33,7 @@ namespace SPDemo.Models
             using (OracleConnection con = new OracleConnection(cs))
             {
                 con.Open();
-                string query = "TRANSACTION.INSERT_TRANSMASTER";
+                string query = "TOKO.INSERT_TRANSMASTER";
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -42,7 +42,7 @@ namespace SPDemo.Models
                 cmd.Parameters.Add(new OracleParameter("i_total", OracleDbType.Int32)).Value = Convert.ToInt32(0);
                 i = cmd.ExecuteNonQuery();
 
-                string query2 = "TRANSACTION.GETMAXID";
+                string query2 = "TOKO.GETMAXID";
                 OracleCommand cmd2 = new OracleCommand();
                 cmd2.Connection = con;
                 cmd2.CommandType = CommandType.StoredProcedure;
@@ -57,7 +57,7 @@ namespace SPDemo.Models
                     int QtyItem = Convert.ToInt32(propQty.GetValue(item, null));
                     int PriceItem = Convert.ToInt32(propPrice.GetValue(item, null));
 
-                    string query4 = "TRANSACTION.GET_NAME";
+                    string query4 = "TOKO.GET_NAME";
                     OracleCommand cmd4 = new OracleCommand();
                     cmd4.Connection = con;
                     cmd4.CommandType = CommandType.StoredProcedure;
@@ -67,7 +67,7 @@ namespace SPDemo.Models
                     cmd4.ExecuteNonQuery();
                     string nameitem = cmd4.Parameters["ret_val"].Value.ToString();
 
-                    string query3 = "TRANSACTION.INSERT_DETILTRANSAKSI";
+                    string query3 = "TOKO.INSERT_DETILTRANSAKSI";
                     OracleCommand cmd3 = new OracleCommand();
                     cmd3.Connection = con;
                     cmd3.CommandType = CommandType.StoredProcedure;

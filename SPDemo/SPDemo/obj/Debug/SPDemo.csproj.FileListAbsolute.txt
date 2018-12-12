@@ -1,203 +1,54 @@
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\roslyn\csc.exe
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\roslyn\Microsoft.CSharp.Core.targets
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\roslyn\Microsoft.VisualBasic.Core.targets
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\roslyn\System.Collections.Immutable.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\roslyn\System.Reflection.Metadata.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\roslyn\vbc.exe
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\roslyn\VBCSCompiler.exe
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\roslyn\VBCSCompiler.exe.config
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\SPDemo.dll.config
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\SPDemo.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\SPDemo.pdb
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\Antlr3.Runtime.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\EntityFramework.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\EntityFramework.SqlServer.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\Microsoft.Web.Infrastructure.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\Newtonsoft.Json.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\Oracle.DataAccess.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\Oracle.ManagedDataAccess.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\Oracle.ManagedDataAccess.EntityFramework.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\Oracle.Web.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.Helpers.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.Mvc.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.Optimization.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.Razor.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.WebPages.Deployment.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.WebPages.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.WebPages.Razor.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\WebGrease.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\EntityFramework.xml
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\EntityFramework.SqlServer.xml
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.Helpers.xml
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.Mvc.xml
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.Optimization.xml
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.Razor.xml
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.WebPages.xml
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.WebPages.Deployment.xml
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\System.Web.WebPages.Razor.xml
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\Antlr3.Runtime.pdb
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\bin\Newtonsoft.Json.xml
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\obj\Debug\SPDemo.dll
-E:\C#\visual studio 2015\Projects\SPDemo\SPDemo\obj\Debug\SPDemo.pdb
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\csc.exe
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CSharp.Core.targets
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.VisualBasic.Core.targets
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\System.Collections.Immutable.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\System.Reflection.Metadata.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\vbc.exe
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\VBCSCompiler.exe
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\VBCSCompiler.exe.config
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\SPDemo.dll.config
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\SPDemo.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\SPDemo.pdb
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Antlr3.Runtime.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.SqlServer.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Microsoft.Web.Infrastructure.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Newtonsoft.Json.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.DataAccess.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.ManagedDataAccess.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.ManagedDataAccess.EntityFramework.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.Web.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Helpers.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Mvc.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Optimization.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Razor.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Deployment.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Razor.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\WebGrease.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.xml
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.SqlServer.xml
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Helpers.xml
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Mvc.xml
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Optimization.xml
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Razor.xml
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.xml
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Deployment.xml
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Razor.xml
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Antlr3.Runtime.pdb
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Newtonsoft.Json.xml
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.csprojResolveAssemblyReference.cache
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.dll
-E:\C#\visual studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.pdb
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\csc.exe
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\vbc.exe
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\VBCSCompiler.exe
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\SPDemo.dll.config
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\SPDemo.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\SPDemo.pdb
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Antlr3.Runtime.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.SqlServer.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Newtonsoft.Json.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.DataAccess.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.ManagedDataAccess.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.ManagedDataAccess.EntityFramework.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.Web.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Helpers.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Mvc.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Optimization.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Razor.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Deployment.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Razor.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\WebGrease.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.SqlServer.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Helpers.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Mvc.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Optimization.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Razor.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Deployment.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Razor.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Antlr3.Runtime.pdb
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\Newtonsoft.Json.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.csprojResolveAssemblyReference.cache
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.pdb
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Net.Http.Formatting.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.WebHost.dll
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Net.Http.Formatting.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.xml
-C:\Users\holario\Documents\Visual Studio 2015\Projects\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.WebHost.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\csc.exe
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\vbc.exe
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\VBCSCompiler.exe
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\SPDemo.dll.config
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\SPDemo.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\SPDemo.pdb
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\Antlr3.Runtime.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.SqlServer.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\Newtonsoft.Json.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.DataAccess.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.ManagedDataAccess.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.ManagedDataAccess.EntityFramework.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.Web.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Net.Http.Formatting.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Helpers.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.WebHost.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Mvc.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Optimization.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Razor.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Deployment.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Razor.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\WebGrease.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.SqlServer.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Net.Http.Formatting.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.WebHost.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Helpers.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Mvc.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Optimization.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Razor.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Deployment.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Razor.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\Antlr3.Runtime.pdb
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\bin\Newtonsoft.Json.xml
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.csprojResolveAssemblyReference.cache
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.dll
-C:\Users\holario\Documents\Visual Studio 2015\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.pdb
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\csc.exe
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\System.Collections.Immutable.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\System.Reflection.Metadata.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\vbc.exe
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\VBCSCompiler.exe
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\roslyn\VBCSCompiler.exe.config
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\SPDemo.dll.config
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\SPDemo.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\SPDemo.pdb
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\Antlr3.Runtime.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.SqlServer.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\Microsoft.Web.Infrastructure.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\Newtonsoft.Json.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.DataAccess.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.ManagedDataAccess.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\Oracle.Web.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Net.Http.Formatting.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Helpers.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.WebHost.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Mvc.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Optimization.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Razor.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Deployment.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Razor.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\WebGrease.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\EntityFramework.SqlServer.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Net.Http.Formatting.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Http.WebHost.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Helpers.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Mvc.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Optimization.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.Razor.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Deployment.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\System.Web.WebPages.Razor.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\Antlr3.Runtime.pdb
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\bin\Newtonsoft.Json.xml
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.csprojResolveAssemblyReference.cache
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.dll
+E:\C#\visual studio 2015\Projects\oracle SP\Oracle-ASP.NET\SPDemo\SPDemo\obj\Debug\SPDemo.pdb
