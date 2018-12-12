@@ -28,7 +28,6 @@ namespace SPDemo.Models
             var propIdItem = type.GetProperty("ID_ITEM");
             var propQty = type.GetProperty("QTY");
             var propPrice = type.GetProperty("PRICE");
-            var propName = type.GetProperty("NAME");
 
             int i;
             using (OracleConnection con = new OracleConnection(cs))
@@ -52,12 +51,25 @@ namespace SPDemo.Models
                 cmd2.ExecuteNonQuery();
                 int idmax = int.Parse(cmd2.Parameters["maxId"].Value.ToString());
 
+                
+
+
                 foreach (var item in transac)
                 {
                     int IdItem = Convert.ToInt32(propIdItem.GetValue(item, null));
                     int QtyItem = Convert.ToInt32(propQty.GetValue(item, null));
                     int PriceItem = Convert.ToInt32(propPrice.GetValue(item, null));
-                    string NameItem = propName.GetValue(item, null).ToString();
+
+                    string query4 = "TOKO.GET_NAME";
+                    OracleCommand cmd4 = new OracleCommand();
+                    cmd4.Connection = con;
+                    cmd4.CommandType = CommandType.StoredProcedure;
+                    cmd4.CommandText = query4;
+                    cmd4.Parameters.Add(new OracleParameter("ret_val", OracleDbType.Varchar2, 100)).Direction = ParameterDirection.ReturnValue;
+                    cmd4.Parameters.Add(new OracleParameter("id_item", OracleDbType.Int32)).Value = Convert.ToInt32(IdItem.ToString());
+                    cmd4.ExecuteNonQuery();
+                    string nameitem = cmd4.Parameters["ret_val"].Value.ToString();
+
                     string query3 = "TOKO.INSERT_DETILTRANSAKSI";
                     OracleCommand cmd3 = new OracleCommand();
                     cmd3.Connection = con;
@@ -65,7 +77,7 @@ namespace SPDemo.Models
                     cmd3.CommandText = query3;
                     cmd3.Parameters.Add(new OracleParameter("detil_item", OracleDbType.Int32)).Value = Convert.ToInt32(IdItem);
                     cmd3.Parameters.Add(new OracleParameter("detil_transmaster", OracleDbType.Int32)).Value = idmax;
-                    cmd3.Parameters.Add(new OracleParameter("detil_name", OracleDbType.Varchar2)).Value = NameItem;
+                    cmd3.Parameters.Add(new OracleParameter("detil_name", OracleDbType.Varchar2)).Value = nameitem;
                     cmd3.Parameters.Add(new OracleParameter("detil_price", OracleDbType.Int32)).Value = Convert.ToInt32(PriceItem);
                     cmd3.Parameters.Add(new OracleParameter("detil_qty", OracleDbType.Int32)).Value = Convert.ToInt32(QtyItem);
                     cmd3.Parameters.Add(new OracleParameter("detil_createdate", OracleDbType.Date)).Value = DateTime.Now;
