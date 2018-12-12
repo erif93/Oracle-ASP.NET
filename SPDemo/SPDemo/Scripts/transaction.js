@@ -11,6 +11,7 @@ function LoadCategory(element) {
                 Items = data;
                 //render catagory
                 renderCategory(element);
+                
             }
         })
     }
@@ -104,7 +105,6 @@ $(document).ready(function () {
             } else {
                 transac = {
                     ID_ITEM: parseInt($('select.pc', this).val()),
-                    NAME: $('select.pc', this).text(),
                     QTY: parseInt($('.quantity', this).val()),
                     PRICE: parseInt($('.rate', this).val()),
                 }
