@@ -2,8 +2,6 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewBag.Title = "Index";
 }
-<h2>Master details entry form</h2>
-
 <style>
     body {
         background-image: repeating-radial-gradient(#f8f8f8, #cef1eb);
@@ -49,9 +47,6 @@
                     <th style="width:10%">
                         Price
                     </th>
-                    <th style="width:10%">
-                        Stock
-                    </th>
                     <th style="width:1%">
                         Quantity
                     </th>
@@ -83,9 +78,6 @@
                                     </th>
                                     <th style="width:10%">
                                         Price
-                                    </th>
-                                    <th style="width:10%">
-                                        Stock
                                     </th>
                                     <th style="width:1%">
                                         Quantity
@@ -120,7 +112,6 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/jquery-ui.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-ui.js"></script>
-    <script src="~/Scripts/transaction.js"></script>
     <script src="~/Content/datatables/jquery.dataTables.min.js"></script>
     <link href="~/Content/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Content/sweetalert/sweetalert.min.js"></script>
@@ -128,12 +119,3 @@
     <script src="~/Scripts/transaksi.js"></script>
 @Scripts.Render("~/bundles/jqueryval")
 }
-
-<style>
-    span.error {
-        display: block;
-        visibility: hidden;
-        color: red;
-        font-size: 90%;
-    }
-</style>

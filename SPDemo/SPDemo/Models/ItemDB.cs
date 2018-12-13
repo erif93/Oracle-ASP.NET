@@ -29,7 +29,7 @@ namespace SPDemo.Models
             con.Open();
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = con;
-            cmd.CommandText = "TRANSACTION.GETITEMALL";
+            cmd.CommandText = "TOKO.GETITEMALL";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new OracleParameter("itemCur", OracleDbType.RefCursor)).Direction = ParameterDirection.Output;
             OracleDataReader rdr = cmd.ExecuteReader();
@@ -54,7 +54,7 @@ namespace SPDemo.Models
             using (OracleConnection con = new OracleConnection(cs))
             {
                 con.Open();
-                string query = "TRANSACTION.INSERT_ITEM";
+                string query = "TOKO.INSERT_ITEM";
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -74,7 +74,7 @@ namespace SPDemo.Models
             using (OracleConnection con = new OracleConnection(cs))
             {
                 con.Open();
-                string query = "TRANSACTION.UPDATE_ITEM";
+                string query = "TOKO.UPDATE_ITEM";
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -96,7 +96,7 @@ namespace SPDemo.Models
             using (OracleConnection con = new OracleConnection(cs))
             {
                 con.Open();
-                string query = "TRANSACTION.DELETE_ITEM";
+                string query = "TOKO.DELETE_ITEM";
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.StoredProcedure;
