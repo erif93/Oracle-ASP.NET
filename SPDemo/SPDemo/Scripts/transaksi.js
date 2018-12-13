@@ -18,12 +18,15 @@
             $('#tablecart tr').each(function (row, tr) {
                 transac = {
                     ID_ITEM: parseInt($(tr).find('td:eq(0)').text()),
-                    QTY: parseInt($(tr).find('td:eq(4)').text()),
+                    QTY: parseInt($(tr).find('td:eq(3)').text()),
                     PRICE: parseInt($(tr).find('td:eq(2)').text()),
                 }
                 list.push(transac);
             })
             list.shift();
+            var total = {TOTAL: $('#total').val()};
+            list.push(total);  
+            console.log(list);
         }
 
         if (errorItemCount > 0) {
@@ -34,30 +37,30 @@
         if (isAllValid) {
 
             $(this).val('Please wait...');
-            console.log(list);
-            //$.ajax({
-            //    type: 'POST',
-            //    url: '/Transactions/Add',
-            //    data: JSON.stringify(list),
-            //    contentType: 'application/json;charset=utf-8',
-            //    dataType: "json",
-            //    success: function (data) {
-            //        if (data.status) {
-            //            alert('Successfully saved');
-            //            //here we will clear the form
-            //            list = [];
-            //            $('#tablecart').empty();
-            //        }
-            //        else {
-            //            alert('Error');
-            //        }
-            //        $('#Save').val('Save');
-            //    },
-            //    error: function (error) {
-            //        console.log(error);
-            //        $('#Save').val('Save');
-            //    }
-            //});
+            $.ajax({
+                type: 'POST',
+                url: '/Transactions/Add',
+                data: JSON.stringify(list),
+                contentType: 'application/json;charset=utf-8',
+                dataType: "json",
+                success: function (data) {
+                    if (data.status) {
+                        alert('Successfully saved');
+                        //here we will clear the form
+                        list = [];
+                        $('#cartlist').empty();
+                        $('#total').val('');
+                    }
+                    else {
+                        alert('Error');
+                    }
+                    $('#Save').val('Save');
+                },
+                error: function (error) {
+                    console.log(error);
+                    $('#Save').val('Save');
+                }
+            });
         }
 
     });

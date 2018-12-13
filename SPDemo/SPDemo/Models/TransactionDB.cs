@@ -22,7 +22,7 @@ namespace SPDemo.Models
 
         string cs = ConfigurationManager.ConnectionStrings["OracleDBContext"].ConnectionString;
 
-        public int Add(IEnumerable<TransactionDB> transac)
+        public int Add(IEnumerable<TransactionDB> transac, int total)
         {
             Type type = typeof(TransactionDB);
             var propIdItem = type.GetProperty("ID_ITEM");
@@ -39,7 +39,7 @@ namespace SPDemo.Models
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = query;
                 cmd.Parameters.Add(new OracleParameter("i_date", OracleDbType.Date)).Value = DateTime.Now;
-                cmd.Parameters.Add(new OracleParameter("i_total", OracleDbType.Int32)).Value = Convert.ToInt32(0);
+                cmd.Parameters.Add(new OracleParameter("i_total", OracleDbType.Int32)).Value = Convert.ToInt32(total);
                 i = cmd.ExecuteNonQuery();
 
                 string query2 = "TOKO.GETMAXID";
@@ -51,7 +51,9 @@ namespace SPDemo.Models
                 cmd2.ExecuteNonQuery();
                 int idmax = int.Parse(cmd2.Parameters["maxId"].Value.ToString());
 
-                foreach (var item in transac)
+                var datasiap = transac.Where(p => p.ID_ITEM != 0).ToList();
+
+                foreach (var item in datasiap)
                 {
                     int IdItem = Convert.ToInt32(propIdItem.GetValue(item, null));
                     int QtyItem = Convert.ToInt32(propQty.GetValue(item, null));
