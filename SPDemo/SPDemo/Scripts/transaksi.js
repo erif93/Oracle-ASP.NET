@@ -72,7 +72,6 @@
 
 //Load Data function  
 function loadData() {
-    console.log("tes");
     $.ajax({
         url: "/Items/List",
         type: "GET",
@@ -86,7 +85,6 @@ function loadData() {
                 html += '<td>' + (key+1) + '</td>';
                 html += '<td>' + item.NAME + '</td>';
                 html += '<td>' + item.PRICE + '</td>';
-                html += '<td>' + item.STOCK + '</td>';
                 html += '<td><input id="qty' + key + '" type="number" onkeyup="this.value = minmax(this.value, 1, ' + item.STOCK + ')"></input></td>';
                 html += '<td><button onclick="AddCart(' + item.ID + ',' + key + ')">Add</button></td>';
                 html += '</tr>';
@@ -108,7 +106,6 @@ function minmax(value, min, max) {
 }
 
 function AddCart(Id, qty) {
-    debugger;
     var qtyy = '#qty' + qty;
     $.ajax({
         url: '/Items/GetbyID/'+Id,
@@ -127,13 +124,11 @@ function AddCart(Id, qty) {
 
             html = html + '<td>' + data.PRICE + '</td>';
 
-            html = html + '<td>' + data.STOCK + '</td>';
-
             html = html + '<td>' + cart.Quantity + '</td>';
 
             html = html + '<td>' + (data.PRICE * cart.Quantity) + '</td>';
 
-            html = html + '<td><button type="button" class="removebutton" id="delete" onclick="Delete()" style="cursor: pointer;font-weight: bold;">Delete</button></td>'
+            html = html + '<td><button type="button" class="removebutton" id="delete' + (data.PRICE * cart.Quantity) + '" onclick="Delete(' + (data.PRICE * cart.Quantity) + ')" style="cursor: pointer;font-weight: bold;">Delete</button></td>'
 
             html = html + '</tr>';
 
@@ -141,34 +136,30 @@ function AddCart(Id, qty) {
             $('#btncart').attr('src', '/Content/icon/shopping-cart-loaded.png');
             swal("Item Berhasil Masuk Keranjang");
             $('#qty' + qty).val('');
-
             var rowCount = document.getElementById('tablecart').rows.length;
             if (rowCount == 2) {
                 var countTotal = 0;
                 countTotal = countTotal + (data.PRICE * cart.Quantity);
                 $('#total').val(countTotal);
             } else {
-                var countTotal = $('#total');
-                countTotal = countTotal + (data.PRICE * cart.Quantity);
-                $('#total').val(countTotal);
+                var countTotal = $('#total').val().toString();
+                var sumTotal = parseInt(countTotal);
+                sumTotal = sumTotal + (data.PRICE * cart.Quantity);
+                $('#total').val(sumTotal);
             }
         }
     });
 }
 
-function Delete() {
-    debugger;
-    $('#delete').closest('tr').remove();
+function Delete(Id) {
+    $('#delete'+Id).closest('tr').remove();
     var rowCount = document.getElementById('tablecart').rows.length;
     if (rowCount == 1) {
         $('#btncart').attr('src', '/Content/icon/shopping-cart.png');
-    }
-}
-function Total() {
-    debugger;
-    var rowCount = document.getElementById('tablecart').rows.length;
-    var total = 0;
-    for (var i = 0 ; i <= rowCount; i++) {
-        console.log('Row ' + parseFloat(i + 1) + ' : ' + document.getElementById('tablecart').rows[i].cells.length + ' column');
+        $('#total').val('');
+    } else {
+        var total = $('#total').val();
+        var totalmin = total - Id;
+        $('#total').val(totalmin);
     }
 }

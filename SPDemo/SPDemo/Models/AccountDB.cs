@@ -25,7 +25,7 @@ namespace SPDemo.Models
             OracleConnection con = new OracleConnection();
             con.ConnectionString = cs;
             con.Open();
-            string query = "select * from transaction.account";
+            string query = "select * from TOKO.account";
             OracleCommand com = new OracleCommand(query, con);
             //com.CommandType = CommandType.StoredProcedure;
             OracleDataReader rdr = com.ExecuteReader();
@@ -48,7 +48,7 @@ namespace SPDemo.Models
             using (OracleConnection con = new OracleConnection(cs))
             {
                 con.Open();
-                string query = "Insert into TRANSACTION.Account(Username,Password) VALUES (:2, :3)";
+                string query = "Insert into TOKO.Account(Username,Password) VALUES (:2, :3)";
                 OracleCommand com = con.CreateCommand();
                 com.CommandText = query;
                 com.CommandType = CommandType.Text;
@@ -66,7 +66,7 @@ namespace SPDemo.Models
             using (OracleConnection con = new OracleConnection(cs))
             {
                 con.Open();
-                string query = "select * from transaction.account where username=:2 and password=:3";
+                string query = "select * from TOKO.account where username=:2 and password=:3";
                 OracleCommand com = con.CreateCommand();
                 com.CommandText = query;
                 com.CommandType = CommandType.Text;
@@ -89,7 +89,7 @@ namespace SPDemo.Models
             using (OracleConnection con = new OracleConnection(cs))
             {
                 con.Open();
-                string query = "Update TRANSACTION.ACCOUNT SET username=:2, password=:3 WHERE id=:1";
+                string query = "Update TOKO.ACCOUNT SET username=:2, password=:3 WHERE id=:1";
                 OracleCommand com = con.CreateCommand();
                 com.CommandText = query;
                 com.CommandType = CommandType.Text;
@@ -109,7 +109,7 @@ namespace SPDemo.Models
             using (OracleConnection con = new OracleConnection(cs))
             {
                 con.Open();
-                string query = "Delete from TRANSACTION.ACCOUNT WHERE id=:1";
+                string query = "Delete from TOKO.ACCOUNT WHERE id=:1";
                 OracleCommand com = con.CreateCommand();
                 com.CommandText = query;
                 com.CommandType = CommandType.Text;
