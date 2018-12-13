@@ -3,6 +3,7 @@
     ViewBag.Title = "Index";
 }
 
+
 <style>
     body {
         background-image: repeating-radial-gradient(#f8f8f8, #cef1eb);
@@ -27,6 +28,7 @@
         text-decoration-line: underline;
         text-align: center;
     }
+    
 </style>
 
 <body>
@@ -74,6 +76,9 @@
                             <thead style="background-color: darksalmon;color: white;">
                                 <tr>
                                     <th style="width:25%">
+                                        Item Id
+                                    </th>
+                                    <th style="width:25%">
                                         Item Name
                                     </th>
                                     <th style="width:10%">
@@ -88,67 +93,28 @@
                                     <th style="width:5%">
                                         Total
                                     </th>
+                                    <th style="width:5%">
+                                        Delete
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody id="cartlist"></tbody>
                         </table>
                     </form>
+                    
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="Save" onclick="Save()" style="cursor: pointer;font-weight: bold;">Add</button>
+                    <span id="orderItemError" style="color:red"></span>
+                    <button type="button" class="btn btn-primary" id="Save" style="cursor: pointer;font-weight: bold;">Check Out</button>
                     <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="Edit()">Update</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal" style="cursor: pointer;font-weight: bold;">Close</button>
+                    <button type="button" class="btn btn-default" id="Close"data-dismiss="modal" style="cursor: pointer;font-weight: bold;">Close</button>
+                    <input type="number" id="total"/>
                 </div>
             </div>
         </div>
     </div>
 </body>
 
-@*<h2>Master details entry form</h2>
-<div class="container">
-   
-    <div class="details">
-        <h2>
-            Order items
-        </h2>
-        <table class="table table-responsive">
-            <tr>
-                <td>Item</td>
-                <td>Quantity</td>
-                <td>Price</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr class="mycontainer" id="mainrow">
-                <td>
-                    <select id="Item" class="pc form-control" @*onchange="LoadProduct(this)">*@
-                        @*<option>Select</option>
-                    </select>
-                    <span class="error">Select Item</span>
-                    
-                </td>
-                <td>
-                    <input type="text" id="Qty" class="quantity form-control" />
-                    <span class="error">Valid Quantity required</span>
-                </td>
-                <td>
-                    <input type="text" id="Price" class="rate form-control" />
-                    <span class="error">Valid Price required</span>
-                </td>
-                <td>
-                    <input type="button" id="add" value="add" style="width:80px" class="btn btn-success" />
-                </td>
-            </tr>
-        </table>
-        <div id="orderItems">
-            <table class="table table-responsive" id="orderdetailsItems"></table>
-            <span id="orderItemError" style="color:red"></span>
-        </div>
-        <div style="padding:10px 0; text-align:right">
-            <input type="text" id="Total"/>
-            <input id="submit" type="button" value="Save Order" class="btn btn-warning" style="padding:10px 20px" />
-        </div>
-    </div>
-</div>*@
 @section Scripts{
     <script src="~/Scripts/jquery-1.12.4.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>

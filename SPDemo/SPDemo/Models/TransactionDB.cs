@@ -51,9 +51,6 @@ namespace SPDemo.Models
                 cmd2.ExecuteNonQuery();
                 int idmax = int.Parse(cmd2.Parameters["maxId"].Value.ToString());
 
-                
-
-
                 foreach (var item in transac)
                 {
                     int IdItem = Convert.ToInt32(propIdItem.GetValue(item, null));

@@ -25,25 +25,30 @@ namespace SPDemo.Controllers
         public JsonResult GetbyID(int ID)
         {
             var account = AccountDB.ListAll().Find(x => x.ID.Equals(ID));
-            account.PASSWORD = DecryptString(account.PASSWORD);
+            //Ini Dipakai kalau pakai metode decode karena two way
+            //account.PASSWORD = DecryptString(account.PASSWORD);
             return Json(account, JsonRequestBehavior.AllowGet);
         }
 
         // GET: Accounts/Create
         public JsonResult Add(AccountDB account)
         {
-            return Json(AccountDB.Add(account), JsonRequestBehavior.AllowGet);
+            var k= Json(AccountDB.Add(account), JsonRequestBehavior.AllowGet);
+            return k;
         }
 
         public JsonResult Update(AccountDB account)
         {
-            return Json(AccountDB.Update(account), JsonRequestBehavior.AllowGet);
+            var k=Json(AccountDB.Update(account), JsonRequestBehavior.AllowGet);
+            return k;
         }
 
         public JsonResult Delete(int ID)
         {
             return Json(AccountDB.Delete(ID), JsonRequestBehavior.AllowGet);
         }
+        
+        //Decode dari base64, md5 gk bisa decrypt karena oneway
         public string DecryptString(string encrString)
         {
             byte[] b;
