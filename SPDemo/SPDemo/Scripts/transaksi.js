@@ -3,10 +3,79 @@
         "ajax": loadData()
     });
     loadData();
+    var errorItemCount = 0;
+    $('#Save').click(function () {
+        debugger;
+        var isAllValid = true;
+        var list = [];
+        var transac;
+        var tbody = $("#tablecart tbody");
+        if (tbody.children().length == 0) {
+            errorItemCount++;
+            console.log(errorItemCount);
+            $(this).addClass('error');
+        } else {
+            $('#tablecart tr').each(function (row, tr) {
+                transac = {
+                    ID_ITEM: parseInt($(tr).find('td:eq(0)').text()),
+                    QTY: parseInt($(tr).find('td:eq(4)').text()),
+                    PRICE: parseInt($(tr).find('td:eq(2)').text()),
+                }
+                list.push(transac);
+            })
+            list.shift();
+        }
+
+        if (errorItemCount > 0) {
+            $('#orderItemError').text(errorItemCount + " invalid entry in order item list.");
+            isAllValid = false;
+        }
+
+        if (isAllValid) {
+
+            $(this).val('Please wait...');
+            console.log(list);
+            //$.ajax({
+            //    type: 'POST',
+            //    url: '/Transactions/Add',
+            //    data: JSON.stringify(list),
+            //    contentType: 'application/json;charset=utf-8',
+            //    dataType: "json",
+            //    success: function (data) {
+            //        if (data.status) {
+            //            alert('Successfully saved');
+            //            //here we will clear the form
+            //            list = [];
+            //            $('#tablecart').empty();
+            //        }
+            //        else {
+            //            alert('Error');
+            //        }
+            //        $('#Save').val('Save');
+            //    },
+            //    error: function (error) {
+            //        console.log(error);
+            //        $('#Save').val('Save');
+            //    }
+            //});
+        }
+
+    });
+    $('#Close').click(function () {
+        debugger;
+        errorItemCount = 0;
+        $('#orderItemError').text('');
+    
+    })
+    
 });
 
 //Load Data function  
 function loadData() {
+<<<<<<< HEAD
+=======
+    console.log("tes");
+>>>>>>> 457eec54858c30d1817884da28ee259bba6407db
     $.ajax({
         url: "/Items/List",
         type: "GET",
@@ -43,7 +112,7 @@ function minmax(value, min, max) {
 function AddCart(Id, qty) {
     var qtyy = '#qty' + qty;
     $.ajax({
-        url: '/Items/GetbyID/' + Id,
+        url: '/Items/GetbyID/'+Id,
         dataType: 'json',
         async: false, // penting untuk sort data 
         type: 'GET',
