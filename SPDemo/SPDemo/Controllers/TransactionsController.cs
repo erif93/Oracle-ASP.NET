@@ -21,8 +21,8 @@ namespace SPDemo.Controllers
         public JsonResult Add(IEnumerable<TransactionDB> transac)
         {
             bool status = false;
-            int a = transacDB.Add(transac);
-
+            int total = transac.Last().TOTAL;
+            int a = transacDB.Add(transac, total);
             if (a != 0)
             {
                 status = true;
