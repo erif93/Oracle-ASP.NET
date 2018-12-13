@@ -72,10 +72,6 @@
 
 //Load Data function  
 function loadData() {
-<<<<<<< HEAD
-=======
-    console.log("tes");
->>>>>>> 457eec54858c30d1817884da28ee259bba6407db
     $.ajax({
         url: "/Items/List",
         type: "GET",
